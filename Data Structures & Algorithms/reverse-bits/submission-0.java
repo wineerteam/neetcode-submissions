@@ -1,0 +1,17 @@
+class Solution {
+    public int reverseBits(int n) {
+
+        int result =0;
+        if( n == 0) return result ;
+        
+        //  1 to 32 bit traverse
+        for( int i=1; i<=32; i++){
+            result=result<<1;
+            result=result|(n&1);
+            n=(n>>1);
+        }
+
+
+        return result;
+    }
+}
